@@ -83,12 +83,16 @@ public class PlayerMovement : MonoBehaviour {
         if (value.performed)
         {
             if (isGrounded)
+            {
                 rb.AddForce(Vector3.up * jumpForce);
+                animator.SetTrigger("jumpTrigger");
+            }
             else if (!hasDoubleJumped)
             {
                 rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
                 rb.AddForce(Vector3.up * doubleJumpForce);
                 hasDoubleJumped = true;
+                animator.SetTrigger("jumpTrigger");
             }
         }
     }
