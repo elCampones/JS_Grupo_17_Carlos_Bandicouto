@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -526,7 +526,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1131268445}
-  m_LocalRotation: {x: 0.11981716, y: 0.07050807, z: -0.008531237, w: 0.9902524}
+  m_LocalRotation: {x: 0.11981721, y: 0.07050801, z: -0.008531233, w: 0.9902524}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2569,7 +2569,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880376300}
-  m_LocalRotation: {x: 0.08906572, y: 0.049224347, z: -0.004407115, w: 0.9947989}
+  m_LocalRotation: {x: 0.089065716, y: 0.04922438, z: -0.004407118, w: 0.9947989}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2643,7 +2643,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1905947961}
-  m_LocalRotation: {x: 0.12588227, y: -0.000000017764481, z: 0.0000000035695558, w: 0.9920452}
+  m_LocalRotation: {x: 0.12588227, y: -0.000000017764542, z: 0.000000003570023, w: 0.9920452}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3492,24 +3492,24 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Avatar
       value: 
-      objectReference: {fileID: 9000000, guid: c75557be906fd344a89c216428649016, type: 3}
+      objectReference: {fileID: 9000000, guid: 988914539ea4f88448568510b7fa7022, type: 3}
     - target: {fileID: 1955730649815600873, guid: fa5309172c6be1a4cb800e3d647c4eb3,
         type: 3}
       propertyPath: m_WarningMessage
       value: "\nBinding warning: Some generic clip(s) animate transforms that are
         already bound by a Humanoid avatar. These transforms can only be changed
-        by Humanoid clips.\n\tTransform 'mixamorig1:Hips'\n\tTransform 'mixamorig1:LeftHandThumb1'\n\tTransform
-        'mixamorig1:RightHand'\n\tTransform 'mixamorig1:LeftHandMiddle2'\n\tTransform
-        'mixamorig1:RightFoot'\n\tTransform 'mixamorig1:Spine1'\n\tTransform 'mixamorig1:RightLeg'\n\tTransform
-        'mixamorig1:RightHandMiddle2'\n\tTransform 'mixamorig1:Hips'\n\tTransform
-        'mixamorig1:RightArm'\n\tand more ...\n\tFrom animation clip 'Take 001'\n\tFrom
-        animation clip 'mixamo.com'\n\tFrom animation clip 'Running'\n\tFrom animation
-        clip 'Running'"
+        by Humanoid clips.\n\tTransform 'mixamorig1:LeftHandMiddle2'\n\tTransform
+        'mixamorig1:Spine1'\n\tTransform 'mixamorig1:LeftHandMiddle1'\n\tTransform
+        'mixamorig1:LeftHandThumb3'\n\tTransform 'mixamorig1:LeftToeBase'\n\tTransform
+        'mixamorig1:LeftHandIndex1'\n\tTransform 'mixamorig1:LeftHand'\n\tTransform
+        'mixamorig1:LeftHandThumb2'\n\tTransform 'mixamorig1:LeftFoot'\n\tTransform
+        'mixamorig1:LeftHandMiddle3'\n\tand more ...\n\tFrom animation clip 'Take
+        001'\n\tFrom animation clip 'mixamo.com'"
       objectReference: {fileID: 0}
     - target: {fileID: 1955730649815600873, guid: fa5309172c6be1a4cb800e3d647c4eb3,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8636353261380552947, guid: fa5309172c6be1a4cb800e3d647c4eb3,
         type: 3}
