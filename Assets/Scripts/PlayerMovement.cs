@@ -4,9 +4,12 @@ using static UnityEngine.InputSystem.InputAction;
 
 [RequireComponent (typeof(Rigidbody))]
 [RequireComponent (typeof(PlayerInput))]
+[RequireComponent (typeof(Animator))]
 public class PlayerMovement : MonoBehaviour {
 
     private Rigidbody rb;
+
+    private Animator animator;
 
     [SerializeField]
     private float jumpForce = 100f;
@@ -43,6 +46,7 @@ public class PlayerMovement : MonoBehaviour {
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
         currentAngularSpeed = transform.rotation.y;
         cameraTransform = GetComponent<PlayerInput>().camera.transform;
     }
