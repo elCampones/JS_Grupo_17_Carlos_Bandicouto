@@ -97,7 +97,7 @@ public class PlayerMovement : MonoBehaviour {
     {
         if (collision.collider.tag == "Floor")
         {
-            isGrounded = true;
+            this.enteringGround(true);
             hasDoubleJumped = false;
             if (targetSpeed == speedAir)
                 targetSpeed = speedGrounded;
@@ -107,7 +107,15 @@ public class PlayerMovement : MonoBehaviour {
     private void OnCollisionExit(Collision collision)
     {
         if (collision.collider.tag == "Floor")
-            isGrounded = false;
+        {
+            this.enteringGround(false);
+        }
+    }
+
+    private void enteringGround(bool isEntering)
+    {
+        isGrounded = isEntering;
+        animator.SetBool("isRunning", isEntering);
     }
 
 }
