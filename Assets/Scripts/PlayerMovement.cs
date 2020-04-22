@@ -125,4 +125,10 @@ public class PlayerMovement : MonoBehaviour {
         animator.SetBool("isRunning", isEntering);
     }
 
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (collider.tag == "Restart")
+            transform.position = Vector3.zero;
+    }
+
 }
