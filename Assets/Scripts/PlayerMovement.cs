@@ -54,6 +54,7 @@ public class PlayerMovement : MonoBehaviour {
     private void Update()
     {
         float frameSpeed = Mathf.SmoothDamp(new Vector2(rb.velocity.x, rb.velocity.z).magnitude, targetSpeed, ref currentSpeed, speedTime);
+        animator.SetFloat("SpeedRatio", frameSpeed / speedGrounded);
         rb.velocity = (transform.forward * frameSpeed) + Vector3.up * rb.velocity.y;
     }
 
@@ -101,7 +102,8 @@ public class PlayerMovement : MonoBehaviour {
     {
         if (collision.collider.tag == "Floor")
         {
-            this.enteringGround(true);
+            isGrounded = true;
+            //this.enteringGround(true);
             hasDoubleJumped = false;
             if (targetSpeed == speedAir)
                 targetSpeed = speedGrounded;
@@ -112,7 +114,8 @@ public class PlayerMovement : MonoBehaviour {
     {
         if (collision.collider.tag == "Floor")
         {
-            this.enteringGround(false);
+            //this.enteringGround(false);
+            isGrounded = false;
         }
     }
 
