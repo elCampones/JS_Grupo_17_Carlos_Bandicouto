@@ -29,9 +29,7 @@ public class FixedMovementPlatforms : MonoBehaviour
     {
         while (transform.position != destination.position)
         {
-            Debug.Log("I'm here " + transform.position);
             transform.position = Vector3.MoveTowards(transform.position, destination.position, speed * Time.deltaTime);
-            Debug.Log("Moving towards: " + Vector3.MoveTowards(transform.position, destination.position, speed * Time.deltaTime));
             yield return null;
         }
     }
