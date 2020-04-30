@@ -64,7 +64,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 300
   doubleJumpForce: 75
-  speedGrounded: 10
+  speedGrounded: 7.5
   speedAir: 6
   rotationTime: 0.2
   speedTime: 0.1

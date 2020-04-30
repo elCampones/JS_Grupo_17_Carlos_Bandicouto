@@ -59,10 +59,10 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     private void FixedUpdate()
-    {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-        if(targetSpeed != 0f)
+    {
+        if (targetSpeed != 0f)
             transform.eulerAngles = Vector3.up * Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref currentAngularSpeed, rotationTime);                                                                                                                                               
-    }
+        }
 
     public void Move (CallbackContext value)
     {
