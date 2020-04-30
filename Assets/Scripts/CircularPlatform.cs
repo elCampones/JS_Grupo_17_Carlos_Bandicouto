@@ -26,8 +26,9 @@ public class CircularPlatform : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        Debug.Log(moveDir);
         float zPos = transform.position.z + moveDir * radius * Mathf.Cos(angularSpeed * currTime);
-        float yPos = transform.position.y + moveDir * radius * Mathf.Sin(angularSpeed * currTime);
+        float yPos = transform.position.y + radius * Mathf.Sin(angularSpeed * currTime);
         platform.position = new Vector3(platform.position.x, yPos, zPos);
 
     }
