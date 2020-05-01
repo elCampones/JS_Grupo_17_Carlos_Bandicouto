@@ -17,8 +17,10 @@ public class ChangeCamera : MonoBehaviour
         if (collision.gameObject.tag == "Player" &&
             cmb.ActiveVirtualCamera.VirtualCameraGameObject.gameObject != newCam.VirtualCameraGameObject.gameObject)
         {
-            cmb.ActiveVirtualCamera.VirtualCameraGameObject.gameObject.SetActive(false);
-            newCam.VirtualCameraGameObject.gameObject.SetActive(true);
+            //cmb.ActiveVirtualCamera.VirtualCameraGameObject.gameObject.SetActive(false);
+            cmb.ActiveVirtualCamera.Priority = 10;
+            //newCam.VirtualCameraGameObject.gameObject.SetActive(true);
+            newCam.Priority = 15;
         }
     }
 }
