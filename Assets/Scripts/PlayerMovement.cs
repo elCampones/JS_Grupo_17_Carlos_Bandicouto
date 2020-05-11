@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 using static UnityEngine.InputSystem.InputAction;
 
 [RequireComponent (typeof(Rigidbody))]
@@ -8,6 +9,9 @@ using static UnityEngine.InputSystem.InputAction;
 public class PlayerMovement : MonoBehaviour {
 
     private Rigidbody rb;
+
+    private int pickUp_count;
+    public Text pickUp_countText;
 
     private Animator animator;
 
@@ -49,6 +53,8 @@ public class PlayerMovement : MonoBehaviour {
         animator = GetComponent<Animator>();
         currentAngularSpeed = transform.rotation.y;
         cameraTransform = GetComponent<PlayerInput>().camera.transform;
+        pickUp_count = 0;
+        setPickUpCountText();
     }
 
     private void Update()
@@ -129,6 +135,19 @@ public class PlayerMovement : MonoBehaviour {
     {
         if (collider.tag == "Restart")
             transform.position = Vector3.zero;
+
+        if (collider.gameObject.CompareTag("Pick Up"))
+        {
+            collider.gameObject.SetActive(false);
+            pickUp_count++;
+            setPickUpCountText();
+        }
+            
+    }
+
+    private void setPickUpCountText()
+    {
+        pickUp_countText.text = "Score: " + pickUp_count.ToString();
     }
 
 }
