@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Cinemachine;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,8 +7,16 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
 
+    [SerializeField]
+    private CinemachineBrain cmb;
+
+    [SerializeField]
+    public CinemachineVirtualCamera newCam;
+
     public GameObject pauseMenuUI;
-    // Update is called once per frame
+
+    public GameObject player;
+
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape) )
@@ -20,10 +29,15 @@ public class PauseMenu : MonoBehaviour
                 Pause();
             }
         }
+        if(Input.GetKeyDown(KeyCode.Backspace))
+        {
+            Pause();
+        }
     }
 
     public void Resume()
     {
+        newCam.Priority = 1;
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -31,8 +45,22 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
+        player.SetActive(true);
+        newCam.Priority = 1;
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+    }
+
+    public void Debug()
+    {
+        cmb.ActiveVirtualCamera.Priority = 10;
+        newCam.Priority = 15;
+    
+        player.SetActive(false);
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        
+
     }
 }
