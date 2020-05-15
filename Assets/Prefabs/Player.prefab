@@ -62,6 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16a70ed3b0208844f9695475ceb0e32a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickUp_countText: {fileID: 0}
   jumpForce: 300
   doubleJumpForce: 75
   speedGrounded: 7.5
