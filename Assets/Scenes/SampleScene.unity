@@ -988,7 +988,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 163163392}
-  m_LocalRotation: {x: -0.0069697914, y: 0.98917556, z: 0.13776268, w: 0.050047114}
+  m_LocalRotation: {x: -0.0069697867, y: 0.98917556, z: 0.13776268, w: 0.05004708}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1020,7 +1020,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 164005127}
-  m_LocalRotation: {x: -0.013154991, y: 0.986037, z: 0.13574772, w: 0.095554315}
+  m_LocalRotation: {x: -0.013154985, y: 0.986037, z: 0.13574772, w: 0.09555428}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1177,6 +1177,7 @@ GameObject:
   - component: {fileID: 171675834}
   - component: {fileID: 171675839}
   - component: {fileID: 171675838}
+  - component: {fileID: 171675840}
   m_Layer: 0
   m_Name: Platform 6 (6)
   m_TagString: Floor
@@ -1501,6 +1502,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5, y: 1.0173645, z: 5}
   m_Center: {x: 17.5, y: 0.50868225, z: -17}
+--- !u!114 &171675840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171675832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d1edf71046710d41bf5b3fa71b7b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnProbability: 0.2
+  verticalDisplacement: 0.5
+  pear: {fileID: 7699625073795342059, guid: 0565d028366d2ac4a92770a772e78456, type: 3}
 --- !u!4 &180116583 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9015076492722240505, guid: 2d4d465b203a3b34cba6284ad4729dde,
@@ -1520,6 +1536,7 @@ GameObject:
   - component: {fileID: 184678438}
   - component: {fileID: 184678437}
   - component: {fileID: 184678436}
+  - component: {fileID: 184678440}
   m_Layer: 0
   m_Name: Platform 6 (8)
   m_TagString: Floor
@@ -1817,6 +1834,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 184678434}
   m_Mesh: {fileID: 2107488264}
+--- !u!114 &184678440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184678434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d1edf71046710d41bf5b3fa71b7b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnProbability: 0.2
+  verticalDisplacement: 0.5
+  pear: {fileID: 7699625073795342059, guid: 0565d028366d2ac4a92770a772e78456, type: 3}
 --- !u!1 &188437631
 GameObject:
   m_ObjectHideFlags: 0
@@ -4839,7 +4871,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh88574
+  m_Name: pb_Mesh139338
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5809,6 +5841,7 @@ GameObject:
   - component: {fileID: 411939382}
   - component: {fileID: 411939387}
   - component: {fileID: 411939386}
+  - component: {fileID: 411939388}
   m_Layer: 0
   m_Name: Platform 6 (2)
   m_TagString: Floor
@@ -6133,6 +6166,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5, y: 0.81015587, z: 5}
   m_Center: {x: 17.5, y: 0.40507793, z: -17}
+--- !u!114 &411939388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411939380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d1edf71046710d41bf5b3fa71b7b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnProbability: 0.2
+  verticalDisplacement: 0.5
+  pear: {fileID: 7699625073795342059, guid: 0565d028366d2ac4a92770a772e78456, type: 3}
 --- !u!1001 &439286530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6838,6 +6886,7 @@ GameObject:
   - component: {fileID: 480246853}
   - component: {fileID: 480246852}
   - component: {fileID: 480246851}
+  - component: {fileID: 480246855}
   m_Layer: 0
   m_Name: Platform 6
   m_TagString: Floor
@@ -7135,6 +7184,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 480246849}
   m_Mesh: {fileID: 559795991}
+--- !u!114 &480246855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480246849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d1edf71046710d41bf5b3fa71b7b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnProbability: 0.2
+  verticalDisplacement: 0.5
+  pear: {fileID: 7699625073795342059, guid: 0565d028366d2ac4a92770a772e78456, type: 3}
 --- !u!43 &487462306
 Mesh:
   m_ObjectHideFlags: 0
@@ -7304,7 +7368,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh88312
+  m_Name: pb_Mesh139062
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7521,7 +7585,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh87744
+  m_Name: pb_Mesh138474
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8646,7 +8710,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh87938
+  m_Name: pb_Mesh138680
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9212,7 +9276,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh88830
+  m_Name: pb_Mesh139602
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9501,7 +9565,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh88324
+  m_Name: pb_Mesh139074
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9825,7 +9889,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh88222
+  m_Name: pb_Mesh138968
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10581,17 +10645,9 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_IsSelectable: 1
-  m_SelectedFaces: 02000000
-  m_SelectedEdges:
-  - a: 8
-    b: 9
-  - a: 10
-    b: 8
-  - a: 9
-    b: 11
-  - a: 11
-    b: 10
-  m_SelectedVertices: 08000000090000000a0000000b000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!23 &665635415
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13135,6 +13191,7 @@ GameObject:
   - component: {fileID: 867948981}
   - component: {fileID: 867948980}
   - component: {fileID: 867948979}
+  - component: {fileID: 867948983}
   m_Layer: 0
   m_Name: Platform 6 (7)
   m_TagString: Floor
@@ -13432,6 +13489,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 867948977}
   m_Mesh: {fileID: 645114976}
+--- !u!114 &867948983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867948977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d1edf71046710d41bf5b3fa71b7b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnProbability: 0.2
+  verticalDisplacement: 0.5
+  pear: {fileID: 7699625073795342059, guid: 0565d028366d2ac4a92770a772e78456, type: 3}
 --- !u!1 &876544232
 GameObject:
   m_ObjectHideFlags: 3
@@ -14954,6 +15026,7 @@ GameObject:
   - component: {fileID: 988878161}
   - component: {fileID: 988878160}
   - component: {fileID: 988878159}
+  - component: {fileID: 988878163}
   m_Layer: 0
   m_Name: Platform 6 (10)
   m_TagString: Floor
@@ -15251,6 +15324,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 988878157}
   m_Mesh: {fileID: 1340208691}
+--- !u!114 &988878163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988878157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d1edf71046710d41bf5b3fa71b7b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnProbability: 0.2
+  verticalDisplacement: 0.5
+  pear: {fileID: 7699625073795342059, guid: 0565d028366d2ac4a92770a772e78456, type: 3}
 --- !u!1 &1002187939
 GameObject:
   m_ObjectHideFlags: 0
@@ -15264,6 +15352,7 @@ GameObject:
   - component: {fileID: 1002187943}
   - component: {fileID: 1002187942}
   - component: {fileID: 1002187941}
+  - component: {fileID: 1002187945}
   m_Layer: 0
   m_Name: Platform 3
   m_TagString: Floor
@@ -15561,6 +15650,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002187939}
   m_Mesh: {fileID: 495974567}
+--- !u!114 &1002187945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002187939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d1edf71046710d41bf5b3fa71b7b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnProbability: 0.2
+  verticalDisplacement: 0.5
+  pear: {fileID: 7699625073795342059, guid: 0565d028366d2ac4a92770a772e78456, type: 3}
 --- !u!1 &1002744171
 GameObject:
   m_ObjectHideFlags: 0
@@ -15574,6 +15678,7 @@ GameObject:
   - component: {fileID: 1002744175}
   - component: {fileID: 1002744174}
   - component: {fileID: 1002744173}
+  - component: {fileID: 1002744177}
   m_Layer: 0
   m_Name: Platform 6 (3)
   m_TagString: Floor
@@ -15871,6 +15976,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002744171}
   m_Mesh: {fileID: 631995602}
+--- !u!114 &1002744177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002744171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d1edf71046710d41bf5b3fa71b7b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnProbability: 0.2
+  verticalDisplacement: 0.5
+  pear: {fileID: 7699625073795342059, guid: 0565d028366d2ac4a92770a772e78456, type: 3}
 --- !u!4 &1013406026 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9015076492722240505, guid: 2d4d465b203a3b34cba6284ad4729dde,
@@ -16522,7 +16642,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1116111698}
-  m_LocalRotation: {x: -0.014886122, y: 0.9834121, z: 0.15361355, w: 0.09529991}
+  m_LocalRotation: {x: -0.014886117, y: 0.9834121, z: 0.15361355, w: 0.09529987}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -19186,7 +19306,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh88300
+  m_Name: pb_Mesh139050
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19671,7 +19791,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh88728
+  m_Name: pb_Mesh139500
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20608,7 +20728,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh87910
+  m_Name: pb_Mesh138648
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21253,6 +21373,7 @@ GameObject:
   - component: {fileID: 1602090401}
   - component: {fileID: 1602090400}
   - component: {fileID: 1602090399}
+  - component: {fileID: 1602090403}
   m_Layer: 0
   m_Name: Platform 4
   m_TagString: Floor
@@ -21550,6 +21671,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1602090397}
   m_Mesh: {fileID: 381631742}
+--- !u!114 &1602090403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602090397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d1edf71046710d41bf5b3fa71b7b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnProbability: 0.2
+  verticalDisplacement: 0.5
+  pear: {fileID: 7699625073795342059, guid: 0565d028366d2ac4a92770a772e78456, type: 3}
 --- !u!1 &1611707757
 GameObject:
   m_ObjectHideFlags: 0
@@ -23973,7 +24109,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880376300}
-  m_LocalRotation: {x: 0.089065626, y: 0.049224366, z: -0.0044071027, w: 0.99479896}
+  m_LocalRotation: {x: 0.089065626, y: 0.04922437, z: -0.004407098, w: 0.99479896}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -24250,6 +24386,7 @@ GameObject:
   - component: {fileID: 1927876700}
   - component: {fileID: 1927876699}
   - component: {fileID: 1927876703}
+  - component: {fileID: 1927876704}
   m_Layer: 0
   m_Name: Platform 2
   m_TagString: Floor
@@ -24561,6 +24698,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cmb: {fileID: 534669906}
   newCam: {fileID: 190928513}
+--- !u!114 &1927876704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927876697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d1edf71046710d41bf5b3fa71b7b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnProbability: 0.2
+  verticalDisplacement: 0.5
+  pear: {fileID: 7699625073795342059, guid: 0565d028366d2ac4a92770a772e78456, type: 3}
 --- !u!1 &1947360681
 GameObject:
   m_ObjectHideFlags: 3
@@ -24987,7 +25139,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh88776
+  m_Name: pb_Mesh139548
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25418,6 +25570,7 @@ GameObject:
   - component: {fileID: 1998287321}
   - component: {fileID: 1998287320}
   - component: {fileID: 1998287319}
+  - component: {fileID: 1998287323}
   m_Layer: 0
   m_Name: Platform 6 (1)
   m_TagString: Floor
@@ -25715,6 +25868,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1998287317}
   m_Mesh: {fileID: 1966176249}
+--- !u!114 &1998287323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998287317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d1edf71046710d41bf5b3fa71b7b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnProbability: 0.2
+  verticalDisplacement: 0.5
+  pear: {fileID: 7699625073795342059, guid: 0565d028366d2ac4a92770a772e78456, type: 3}
 --- !u!1 &2001661112
 GameObject:
   m_ObjectHideFlags: 0
@@ -27749,6 +27917,7 @@ GameObject:
   - component: {fileID: 2043913630}
   - component: {fileID: 2043913629}
   - component: {fileID: 2043913634}
+  - component: {fileID: 2043913635}
   - component: {fileID: 2043913633}
   m_Layer: 0
   m_Name: Platform 6 (5)
@@ -28074,6 +28243,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5, y: 0.8661709, z: 5}
   m_Center: {x: 17.5, y: 0.43308544, z: -17}
+--- !u!114 &2043913635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043913627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d1edf71046710d41bf5b3fa71b7b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnProbability: 0.2
+  verticalDisplacement: 0.5
+  pear: {fileID: 7699625073795342059, guid: 0565d028366d2ac4a92770a772e78456, type: 3}
 --- !u!1001 &2056534402
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29775,7 +29959,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh87762
+  m_Name: pb_Mesh138492
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
