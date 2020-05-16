@@ -75,32 +75,31 @@ public class RopeManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        for (int i = 1; i < numRopePoints; i++)
-        {
-            /*if (i == 1)
-            {
-                Debug.Log(i - 1 + " in pos: " + ropeParts[i - 1].position);
-                Debug.Log(i + " in pos: " + ropeParts[i].position);
-            }*/
-            float distance = (ropeParts[i].position - ropeParts[i - 1].position).magnitude;
-            Vector3 displacement = (ropeParts[i].position - ropeParts[i - 1].position).normalized * Math.Abs(distance - distanceBetweenPoints);
-            /*if (i == 1)
-            {
-                Debug.Log("Displacement = " + displacement);
-                Debug.Log("Distance after the displacement: " + (ropeParts[i].position - ropeParts[i - 1].position - displacement).magnitude);
-            }*/
-            ropeParts[i].MovePosition(ropeParts[i].position - displacement);
-            Vector3 velocity = ropeParts[i].velocity;
-            ropeParts[i].velocity.Set(velocity.x, -gravity, velocity.y);
-        }
+        maintainDistanceFirstPoint();
+        maintainDistancePoints();
     }
 
-    /*private void maintainDistanceFirstPoint()
+    private void maintainDistanceFirstPoint()
     {
+        Vector3 displacement = ropeParts[1].position - ropeParts[0].position;
+        float distance = displacement.magnitude;
+        Vector3 pointCorrectionDisplacement = displacement.normalized * Math.Abs(distance - distanceBetweenPoints);
+        ropeParts[1].MovePosition(ropeParts[1].position - pointCorrectionDisplacement);
+        Vector3 velocity = ropeParts[1].velocity;
+        ropeParts[1].velocity.Set(velocity.x, -gravity, velocity.y);
     }
 
     private void maintainDistancePoints()
     {
-
-    }*/
+        for (int i = 2; i < numRopePoints; i++)
+        {
+            Vector3 displacement = ropeParts[i].position - ropeParts[i - 1].position;
+            float distance = (ropeParts[i].position - ropeParts[i - 1].position).magnitude;
+            Vector3 pointCorrectionDisplacement = displacement.normalized * Math.Abs(distance - distanceBetweenPoints) * .5f;
+            ropeParts[i - 1].MovePosition(ropeParts[i - 1].position + pointCorrectionDisplacement);
+            ropeParts[i].MovePosition(ropeParts[i].position - pointCorrectionDisplacement);
+            Vector3 velocity = ropeParts[i].velocity;
+            ropeParts[i].velocity.Set(velocity.x, -gravity, velocity.y);
+        }
+    }
 }
