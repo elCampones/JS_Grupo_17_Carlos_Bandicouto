@@ -106,7 +106,7 @@ public class PlayerMovement : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.tag == "Floor")
+        if (collision.collider.tag == "Floor" || collision.collider.tag == "BoxMcGuffin")
         {
             isGrounded = true;
             //this.enteringGround(true);
