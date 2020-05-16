@@ -108,7 +108,7 @@ public class RopeManager : MonoBehaviour
                 }
         Debug.Log(currentDiferences - targetDiferences);*/
         //}
-        wasAffectedByPhysics = false;
+        //wasAffectedByPhysics = false;
     }
 
     private void accountForGravity()
@@ -127,7 +127,7 @@ public class RopeManager : MonoBehaviour
         //Debug.Log(distance);
         Vector3 pointCorrectionDisplacement = displacement.normalized * Math.Abs(distance - distanceBetweenPoints);
         updatedPositions[fixedIndex + 1] -= pointCorrectionDisplacement;
-
+        ropeParts[fixedIndex + 1].MovePosition(updatedPositions[fixedIndex + 1] - pointCorrectionDisplacement);
         //Debug.Log("Point " + (fixedIndex + 1) + ": " + pointCorrectionDisplacement);
         /*Vector3 velocity = ropeParts[fixedIndex + 1].velocity;
         ropeParts[fixedIndex + 1].velocity.Set(velocity.x, -gravity, velocity.y);*/
@@ -147,13 +147,21 @@ public class RopeManager : MonoBehaviour
             /*Vector3 velocity = ropeParts[i].velocity;
             ropeParts[i].velocity.Set(velocity.x, -gravity, velocity.y);*/
         }
+
+        /*for (int i = 3; i < numRopePoints - 1; i++)
+        {
+            Vector3 displacement = positionsAfterGravity[i] - positionsAfterGravity[i - 2];
+            float distance = displacement.magnitude;
+            Vector3 pointCorrectionDisplacement = displacement.normalized * Math.Abs(distance - 2 * distanceBetweenPoints) * .5f;
+            ropeParts[i - 2].MovePosition(positionsAfterGravity[i - 2])
+        }*/
     }
 
     private void FixedUpdate()
     {
         for (int i = 1; i < numRopePoints; i++)
         {
-            ropeParts[i].MovePosition(updatedPositions[i]);
+            //ropeParts[i].MovePosition(updatedPositions[i]);
         }
         wasAffectedByPhysics = true;
     }
