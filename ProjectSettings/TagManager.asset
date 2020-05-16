@@ -8,6 +8,7 @@ TagManager:
   - Restart
   - Pick Up
   - BoxMcGuffin
+  - endGame
   layers:
   - Default
   - TransparentFX

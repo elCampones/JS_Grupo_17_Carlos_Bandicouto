@@ -6,7 +6,7 @@ public class RandomPearSpawner : MonoBehaviour
 {
 
     [SerializeField]
-    private float spawnProbability = .2f;
+    private int spawnProbability = 20;
 
     [SerializeField]
     private float verticalDisplacement = .5f;
@@ -16,9 +16,11 @@ public class RandomPearSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        float r = Random.Range(0, 1);
-        if (r < spawnProbability)
-            Instantiate(pear, transform.position + Vector3.up * verticalDisplacement, Quaternion.identity);
+        int r = Random.Range(0,100);
+        Debug.Log(r);
+        if (r < spawnProbability){
+            Instantiate(pear, transform.position + new Vector3(17.5f, 1, -17), Quaternion.identity);
+        }
     }
     
 }
