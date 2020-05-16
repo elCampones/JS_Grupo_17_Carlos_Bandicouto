@@ -33,6 +33,11 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField]
     private float speedTime = .1f;
 
+    [SerializeField]
+    private float MaxWaitJumpTime = 2f;
+
+    private float waitJumpTime;
+
     private float targetRotation;
 
     private float currentAngularSpeed;
@@ -55,6 +60,7 @@ public class PlayerMovement : MonoBehaviour {
         cameraTransform = GetComponent<PlayerInput>().camera.transform;
         pickUp_count = 0;
         setPickUpCountText();
+        waitJumpTime = 0;
     }
 
     private void Update()
@@ -62,6 +68,7 @@ public class PlayerMovement : MonoBehaviour {
         float frameSpeed = Mathf.SmoothDamp(new Vector2(rb.velocity.x, rb.velocity.z).magnitude, targetSpeed, ref currentSpeed, speedTime);
         animator.SetFloat("SpeedRatio", frameSpeed / speedGrounded);
         rb.velocity = (transform.forward * frameSpeed) + Vector3.up * rb.velocity.y;
+        waitJumpTime -= Time.deltaTime;
     }
 
     private void FixedUpdate()
@@ -93,8 +100,9 @@ public class PlayerMovement : MonoBehaviour {
             {
                 rb.AddForce(Vector3.up * jumpForce);
                 animator.SetTrigger("jumpTrigger");
+                waitJumpTime = MaxWaitJumpTime;
             }
-            else if (!hasDoubleJumped)
+            else if (!hasDoubleJumped && waitJumpTime <= 0)
             {
                 rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
                 rb.AddForce(Vector3.up * doubleJumpForce);
@@ -111,6 +119,7 @@ public class PlayerMovement : MonoBehaviour {
             isGrounded = true;
             //this.enteringGround(true);
             hasDoubleJumped = false;
+            waitJumpTime = 0f;
             if (targetSpeed == speedAir)
                 targetSpeed = speedGrounded;
         }
