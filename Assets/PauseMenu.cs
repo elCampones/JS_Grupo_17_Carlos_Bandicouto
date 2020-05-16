@@ -31,10 +31,7 @@ public class PauseMenu : MonoBehaviour
                 Pause();
             }
         }
-        if(Input.GetKeyDown(KeyCode.Backspace))
-        {
-            Pause();
-        }
+        
     }
 
     public void Resume()
@@ -62,6 +59,7 @@ public class PauseMenu : MonoBehaviour
         player.SetActive(false);
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
+        GameIsPaused = false;
         
 
     }
