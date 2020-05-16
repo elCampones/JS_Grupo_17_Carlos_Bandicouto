@@ -10,8 +10,6 @@ public class DebugCameraFollow : MonoBehaviour
    
    public GameObject pauseMenuUI;
 
-   
-
    public float cameraSensitivity = 90;
 	public float climbSpeed = 4;
 	public float normalMoveSpeed = 10;

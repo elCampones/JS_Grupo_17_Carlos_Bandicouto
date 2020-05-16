@@ -50,6 +50,8 @@ public class PlayerMovement : MonoBehaviour {
 
     private bool hasDoubleJumped = false;
 
+    public Vector3 respawnPoint = Vector3.zero;
+
     Transform cameraTransform;
 
     private void Start()
@@ -143,7 +145,7 @@ public class PlayerMovement : MonoBehaviour {
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.tag == "Restart")
-            transform.position = Vector3.zero;
+            transform.position = respawnPoint;
 
         if (collider.gameObject.CompareTag("Pick Up"))
         {
